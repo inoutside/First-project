@@ -1,0 +1,234 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:500;}
+/*--------------------*/
+
+body{
+	font-family: Inter;
+	color: #fff;
+	background: #000;
+	font-size: 15px;
+}
+
+.content{
+	display: flex;
+	max-width: 1680px;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100%;
+	margin: auto;
+}
+
+h1{
+	font-size: 75px;
+	font-weight: 600;
+}
+
+h2{
+	font-size: 30px;
+	font-weight: 600;
+}
+
+/*---------------Description-----------------------*/
+
+.description{
+	width: 460px;
+}
+
+.description__header{
+	margin: 0px 0px 40px 0px;
+}
+
+.description__blocks{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px 0px 45px 0px;
+}
+
+.block{
+	width: 206px;
+	height: 86px;
+	margin: 25px 0px 0px 0px;
+	padding: 0px 5px 0px 0px;
+}
+
+.description__image{
+	height: 30px;
+	width: 30px;
+	padding: 0px 0px 7px 0px;
+}
+
+.description__question{
+	line-height: 25px;
+	opacity: 60%;
+}
+
+
+.description__answer{
+    -webkit-line-clamp: 3;
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+}
+
+
+.description__tittle{
+	margin: 45px 0px 0px 0px;
+}
+
+.tittle{
+	margin: 0px 0px 15px 0px;
+}
+
+.row:not(:last-child){
+	margin: 0px 0px 17px 0px;
+}
+
+.description__skill-name{
+	margin: 0px 0px 1px 0px;
+}
+
+.description__skill{
+	background: #5E5E5E;
+	height: 7px;
+	border-radius: 5px;
+}
+
+.skill{
+	background: #fff;
+	height: 7px;
+	border-radius: 5px;
+}
+
+/*---------------About-----------------------*/
+
+.about{
+	width: 460px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 10px 10px 10px;
+}
+
+.text{
+	max-height: 220px;
+	overflow: hidden;
+	line-height: 25px;
+	color: #B7B5B5;
+}
+
+.biography__text{
+	margin: 0px 0px 50px 0px;
+}
+
+.needs__text{
+	margin: 0px 0px 45px 0px;
+}
+
+.needs__list{
+	padding: 0px 0px 0px 10px;
+}
+
+.needs__list li:not(:last-child){
+	margin: 0px 0px 10px 0px;
+}
+
+.needs__list li:before{
+	content: '';
+	width: 5px;
+	height: 5px;
+	background-color: #B7B5B5;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 10px 5px 0px -10px;
+	position: absolute;
+}
+
+/*---------------Photo-----------------------*/
+
+.photo{
+	position: relative;
+}
+
+
+.photo__image{
+	max-width: 460px;
+	max-height: 700px;
+	overflow: hidden;
+}
+
+.photo__image img{
+	width: 100%;
+}
+
+.photo__quate{
+	max-width: 360px;
+	max-height: 580px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 85px;
+	left: 35px;
+	font-size: 30px;
+	line-height: 35px;
+	font-weight: 600;
+}
+
+/*c 1370px и выше*/
+@media (min-width:1370px){
+	.description{
+		margin: 0px 15px;
+	}
+	.photo{
+		margin: 0px 15px;
+	}
+
+}
+
+/*c 520px и до 1369px*/
+@media (min-width:520px){
+	.description{
+		margin: 0px 15px;
+	}
+	.about{
+		margin: 30px 15px 0px 15px;
+	}
+	.photo{
+		margin: 30px 15px 0px 15px;
+	}
+
+}
+
+
+
+/*до 520px*/
+@media (max-width:520px){
+	h1{
+		font-size: 30px
+	}
+	.description__header{
+		margin: 15px 0px;
+	}
+	.description{
+		margin: 15px;
+	}
+	.about{
+		margin: 15px;
+	}
+	.photo{
+		margin: 15px;
+	}
+
+}
